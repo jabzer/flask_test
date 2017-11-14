@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>过滤器</h1>
+    <img src="{{ av|default('http://tu.66vod.net/2016/3701.jpg') }}">
+    <hr>
+    <p>评论数：({{ comments|length }})</p>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <a href="#">{{ comment.user }}  说：</a>
+                <p>{{ comment.content }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
