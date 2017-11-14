@@ -5,9 +5,10 @@ DEBUG = True
 DIALECT = 'mysql'
 DRIVER = 'pymysql'
 USERNAME = 'root'
-PASSWORD = 'aaa111'
+PASSWORD = 'a1'
 HOST = '127.0.0.1'
 PORT = '3306'
-DATABASE = 'db_demo1'
+DATABASE = 'db_dome1'
 
-"{}+{}://{}:{}@{}:{}/{}?charset=utf8".format()
+SQLALCHEMY_DATABASE_URI="{}+{}://{}:{}@{}:{}/{}?charset=utf8".format(DIALECT,DRIVER,USERNAME,PASSWORD,HOST,PORT,DATABASE)
+SQLALCHEMY_TRACK_MODIFICATIONS = False
